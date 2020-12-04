@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         var returnValue:NSAttributedString?
         returnValue = builder?.generatedAttributedString()
         if returnValue != nil {
-            //needed to show link highlighting
             return  returnValue!
         }else{
             return NSAttributedString(string: "")
@@ -37,13 +36,6 @@ class ViewController: UIViewController {
 extension ViewController:
     DTAttributedTextContentViewDelegate, DTLazyImageViewDelegate{
     func attributedTextContentView(_ attributedTextContentView: DTAttributedTextContentView!, viewFor attachment: DTTextAttachment!, frame: CGRect) -> UIView! {
-//        if attachment is DTImageTextAttachment {
-//            let imageView = DTLazyImageView(frame: frame)
-//            imageView.delegate = self
-//            // url for deferred loading
-//            imageView.url = attachment.contentURL
-//            return imageView
-//        }
         if attachment is DTIframeTextAttachment {
             let webview = WKWebView(frame: frame)
             let html = "<iframe src= \(attachment!.contentURL.absoluteString)></iframe>"
@@ -52,22 +44,4 @@ extension ViewController:
         }
         return UIView(frame: CGRect.zero)
     }
-    
-    func lazyImageView(_ lazyImageView: DTLazyImageView, didChangeImageSize: CGSize) {
-        guard let url = lazyImageView.url else {return}
-        let pred = NSPredicate(format: "contentURL == %@", url as CVarArg)
-        
-        let array = contentView.layoutFrame.textAttachments(with: pred)
-        
-        
-        
-        for (_, _) in (array?.enumerated())! {
-            let element = DTTextAttachment()
-            element.originalSize = didChangeImageSize
-        }
-        
-        contentView.layouter = nil
-        contentView.relayoutText()
-    }
-    
 }
