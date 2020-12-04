@@ -1,0 +1,6 @@
+framework module Pods_DTCoreTextIframeTrial_DTCoreTextIframeTrialUITests {
+  umbrella header "Pods-DTCoreTextIframeTrial-DTCoreTextIframeTrialUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

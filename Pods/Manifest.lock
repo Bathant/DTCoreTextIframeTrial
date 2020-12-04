@@ -1,0 +1,43 @@
+PODS:
+  - DTCoreText (1.6.26):
+    - DTCoreText/Core (= 1.6.26)
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTCoreText/Core (1.6.26):
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTFoundation/Core (1.7.16)
+  - DTFoundation/DTAnimatedGIF (1.7.16)
+  - DTFoundation/DTHTMLParser (1.7.16):
+    - DTFoundation/Core
+  - DTFoundation/UIKit (1.7.16):
+    - DTFoundation/Core
+
+DEPENDENCIES:
+  - DTCoreText (from `https://github.com/Cocoanetics/DTCoreText.git`, branch `develop`)
+
+SPEC REPOS:
+  trunk:
+    - DTFoundation
+
+EXTERNAL SOURCES:
+  DTCoreText:
+    :branch: develop
+    :git: https://github.com/Cocoanetics/DTCoreText.git
+
+CHECKOUT OPTIONS:
+  DTCoreText:
+    :commit: 24823e50ec7496b80bd9dd346459136511cfa9d5
+    :git: https://github.com/Cocoanetics/DTCoreText.git
+
+SPEC CHECKSUMS:
+  DTCoreText: ec749e013f2e1f76de5e7c7634642e600a7467ce
+  DTFoundation: e7781d9fd2f202bfd451fbbf8cab71ce83b46498
+
+PODFILE CHECKSUM: 185e8c652c33ed2f527d31755d5d707bfc853635
+
+COCOAPODS: 1.9.3

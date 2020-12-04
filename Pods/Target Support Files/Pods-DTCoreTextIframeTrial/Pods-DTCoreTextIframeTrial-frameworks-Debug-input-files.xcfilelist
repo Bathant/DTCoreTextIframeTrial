@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-DTCoreTextIframeTrial/Pods-DTCoreTextIframeTrial-frameworks.sh
+${BUILT_PRODUCTS_DIR}/DTCoreText/DTCoreText.framework
+${BUILT_PRODUCTS_DIR}/DTFoundation/DTFoundation.framework
